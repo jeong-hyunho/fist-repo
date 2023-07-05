@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			const increase = function() {
+				let num = 0 ;
+				console.log('debug_f1.. num :' + num )
+				// 클로저 
+				return function() {
+					console.log('debug_f2.. num :' + num )
+					return ++num ;
+				};
+			}() ;
+			console.log(increase);
+			console.dir(increase);
+			
+			console.log('debug1..');
+			console.log(increase());
+			
+			console.log('debug2..');
+			console.log(increase());
+			
+			console.log('debug3..');
+			console.log(increase());
+			
+		</script>
+	</body>
+</html>

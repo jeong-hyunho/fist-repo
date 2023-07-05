@@ -1,0 +1,43 @@
+// reduce : 콜백함수와 초기값을 전달받아 하나의 결과값을 반환한다.
+//          반환값을 다음 순회시에 콜백함수의 첫번째 인수로 전달 함
+const fruits = ['banana' , 'apple', 'orange' , 'orange', 'apple'] ;
+
+const count = fruits.reduce((acc, cur) => {
+	console.log(`#1 acc[cur]: ${acc[cur]} , cur: ${cur}`);
+  
+  	acc[cur]  = (acc[cur] || 0 ) + 1 ;
+
+  	console.log(`#2 acc[${cur}]: ${acc[cur]} , cur: ${cur}`);
+
+  	console.log(`#3 ${acc}`) ;
+  	return acc ;
+  
+}, {});
+
+console.log(count) ;
+
+/*
+const acc = {} ;
+console.log(`#1 acc['banana'] :  ${acc['banana']}`) ;
+
+acc['banana'] = 1 ;
+console.log(`#1 acc['banana'] :  ${acc['banana']}`) ;
+*/
+
+
+// 중첩배열 평탄화 
+
+const values = [1, [2, 3], 4, [5, 6]] ;
+const flatten = values.reduce((acc, cur) => acc.concat(cur) , [] );
+
+console.log(flatten);
+
+/*
+const arr1 = [1, 2, 3] ;
+const arr2 = [3,4,5];
+const arr3 = arr1.concat(arr2);
+
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+*/

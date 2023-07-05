@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			const funcs = Array.from(new Array(3), (_ , i) => () => i); // (3) {f,f,f}
+			
+			console.log('funcs[1] : ' + funcs[1]);
+			console.log('debug1.........Object.getPrototypeOf(funcs) === Array.prototype : ')
+			
+			console.log(Object.getPrototypeOf(funcs) === Array.prototype );
+			
+			console.log('debug3.........Object.getPrototypeOf(funcs) === Array.prototype : ')
+			
+			
+			if (Object.getPrototypeOf(funcs) === Array.prototype)
+			{
+				console.log('Object.getPrototypeOf(funcs) === Array.prototype' );
+			}
+			else 
+			{
+				console.log('Object.getPrototypeof(funcs) !== Array.prototype' );
+			}
+			
+			funcs.forEach(f => console.log(f())) ; // 0 1 2
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			var funcs = [] ;
+			
+			for (let i = 0 ; i < 3 ; i++)
+			{
+				funcs[i] = function() { return i ;}
+				console.log(`${i} : ${funcs[i]}`);
+			}
+			
+			for (let j = 0  ; j < funcs.length ; j++) 
+			{
+				console.log(`funcs[${j}]` + funcs[j]);
+				console.log(funcs[j]());
+			}
+			
+			
+			console.log('debug1' + funcs[1]());
+		</script>
+	</body>
+</html>

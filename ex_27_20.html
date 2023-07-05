@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			const arr = [] ;
+			
+			arr[0] = 1 ;
+			arr['1'] = 2 ;
+			
+			console.log("#1 arr : " + arr);
+			
+			arr['foo'] = 3;
+			arr.bar = 4 ;
+			arr[1.1] = 5;
+			arr[-1] = 6 ;
+			
+			console.log("#2 arr : " + arr);
+			
+			// delete
+			const arr2 = [1,2,3,4,5,6];
+			//delete arr2[1];
+			
+			
+			// splice 
+			arr2.splice(1,2)
+			console.log(arr2);
+			console.log(arr2.length);
+			
+			// Array.isArray
+			console.log(Array.isArray( {0: 1, length: 1} ));
+			
+			console.log(Array.isArray( [] ));
+			console.log(Array.isArray( {} ));
+			
+			// indexOf 
+			const arr3 = [1, 2, 2, 3];
+			
+			console.log(arr3.indexOf(2));
+			console.log(arr3.indexOf(4));
+			console.log(arr3.indexOf(2,2));
+			
+			
+			
+			const foods = ['apple', 'banana', 'Orange'];
+			
+			if (foods.indexOf('orange') === -1) {
+				foods.push('orange')
+			}
+			
+			// indexOf => include
+			console.log('#1 ' + foods.includes('apple', 'banana1'));
+			
+			console.log(foods);
+			
+		</script>
+	</body>
+</html>
